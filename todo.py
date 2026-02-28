@@ -11,13 +11,16 @@ def list_tasks():
         for idx, task in enumerate(tasks, start=1):
             print(f'{idx}. {task}')
 
-#added new feature
 def delete_task(task_number):
-    if 0 < task_number <= len(tasks):
-        removed = tasks.pop(task_number - 1)
-        print(f'Task "{removed}" deleted.')
-    else:
-        print("Invalid task number.")
+    try:
+        task_number = int(task_number)
+        if 0 < task_number <= len(tasks):
+            removed = tasks.pop(task_number - 1)
+            print(f'Task "{removed}" deleted.')
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Please enter a valid number.")
 
 if __name__ == "__main__":
     add_task("Finish Assignment")
