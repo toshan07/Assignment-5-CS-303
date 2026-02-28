@@ -66,3 +66,6 @@ git push origin bug-fix
 ```
 git log --oneline --graph --all
 ```
+
+## **Git Log Graph**
+![Git Log Screenshot](graph.png)
