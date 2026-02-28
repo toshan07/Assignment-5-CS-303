@@ -1,0 +1,51 @@
+# Git Workflow for To-Do List Application
+
+1. Initialize Repository
+Initialized the Git repository and made the first commit:
+
+git init
+git add todo.py
+git commit -m "Initial commit: Basic To-Do List application"
+
+
+2. Created and Switched to Feature Branch
+Added a new feature (remove_task function) in "feature-1" branch:
+
+git checkout -b feature-1
+## Modified todo.py to add remove_task function
+git add todo.py
+git commit -m "Added new feature remove_task function"
+
+
+3. Created and Switched to Bug-Fix Branch
+Added input validation for delete_task function:
+
+git checkout main
+git checkout -b bug-fix
+## Added input validation for delete_task function
+git add todo.py
+git commit -m "Bug-fix: Added input validation for delete_task function"
+
+
+4. Merged Changes into Main Branch
+Merged "feature-1" into "main":
+
+git checkout main
+git merge feature-1
+
+Merged "bug-fix" into "main":
+
+git merge bug-fix
+
+
+5. Pushed Changes to GitHub
+Pushed all branches to the remote repository:
+
+git push origin main
+git push origin feature-1
+git push origin bug-fix
+
+
+6. Checked the commit history:
+
+git log --oneline --graph --all
